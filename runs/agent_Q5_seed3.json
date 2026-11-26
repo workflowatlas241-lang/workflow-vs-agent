@@ -1,0 +1,53 @@
+{
+  "answer": "You can cancel your subscription at any time, and it will take effect at the beginning of the next billing cycle. If you have any further questions or need assistance with something else, feel free to ask!",
+  "model_calls": 2,
+  "input_tokens": 669,
+  "output_tokens": 57,
+  "latency_sec": 1.9017789363861084,
+  "tool_calls": [
+    {
+      "name": "get_cancellation_policy",
+      "args": {},
+      "result": "Subscriptions can be cancelled anytime, effective at the next billing cycle."
+    }
+  ],
+  "transcript": [
+    {
+      "role": "system",
+      "content": "You are a support assistant. You can call tools to look up orders, the refund policy, and payments. Investigate and answer the customer. Never invent data — use tool results only."
+    },
+    {
+      "role": "user",
+      "content": "How do I cancel my subscription?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "function": {
+            "name": "get_cancellation_policy",
+            "arguments": {}
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Subscriptions can be cancelled anytime, effective at the next billing cycle."
+    },
+    {
+      "role": "assistant",
+      "content": "You can cancel your subscription at any time, and it will take effect at the beginning of the next billing cycle. If you have any further questions or need assistance with something else, feel free to ask!"
+    }
+  ],
+  "intent": null,
+  "seed": 3,
+  "question_id": "Q5",
+  "design": "agent",
+  "question": "How do I cancel my subscription?",
+  "kind": "known",
+  "expected_intent": "cancellation",
+  "outcome": "success",
+  "wall_sec": 1.9
+}

@@ -1,0 +1,57 @@
+{
+  "answer": "Your order ORD-2003 for a desk lamp has been delivered. It was delivered 5 days ago.",
+  "model_calls": 2,
+  "input_tokens": 696,
+  "output_tokens": 48,
+  "latency_sec": 2.086042642593384,
+  "tool_calls": [
+    {
+      "name": "get_order",
+      "args": {
+        "order_id": "ORD-2003"
+      },
+      "result": "{\"item\": \"desk lamp\", \"status\": \"delivered\", \"delivered_days_ago\": 5}"
+    }
+  ],
+  "transcript": [
+    {
+      "role": "system",
+      "content": "You are a support assistant. You can call tools to look up orders, the refund policy, and payments. Investigate and answer the customer. Never invent data — use tool results only."
+    },
+    {
+      "role": "user",
+      "content": "Has my order ORD-2003 been delivered?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "function": {
+            "name": "get_order",
+            "arguments": {
+              "order_id": "ORD-2003"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "{\"item\": \"desk lamp\", \"status\": \"delivered\", \"delivered_days_ago\": 5}"
+    },
+    {
+      "role": "assistant",
+      "content": "Your order ORD-2003 for a desk lamp has been delivered. It was delivered 5 days ago."
+    }
+  ],
+  "intent": null,
+  "seed": 1,
+  "question_id": "Q4",
+  "design": "agent",
+  "question": "Has my order ORD-2003 been delivered?",
+  "kind": "known",
+  "expected_intent": "order_status",
+  "outcome": "success",
+  "wall_sec": 2.09
+}

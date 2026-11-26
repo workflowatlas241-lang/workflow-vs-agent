@@ -1,0 +1,57 @@
+{
+  "answer": "It appears that there was an issue with the payment on October 5th, which was declined. The charges on October 6th were successful. If you need assistance with this, please let me know!",
+  "model_calls": 2,
+  "input_tokens": 748,
+  "output_tokens": 64,
+  "latency_sec": 1.7424888610839844,
+  "tool_calls": [
+    {
+      "name": "get_payments",
+      "args": {
+        "customer_id": "C-42"
+      },
+      "result": "[{\"date\": \"Oct 5\", \"amount\": 49.0, \"status\": \"declined\"}, {\"date\": \"Oct 6\", \"amount\": 49.0, \"status\": \"charged\"}, {\"date\": \"Oct 6\", \"amount\": 49.0, \"status\": \"charged\"}]"
+    }
+  ],
+  "transcript": [
+    {
+      "role": "system",
+      "content": "You are a support assistant. You can call tools to look up orders, the refund policy, and payments. Investigate and answer the customer. Never invent data — use tool results only."
+    },
+    {
+      "role": "user",
+      "content": "My invoice for C-42 shows two charges but I only ordered once"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "function": {
+            "name": "get_payments",
+            "arguments": {
+              "customer_id": "C-42"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "[{\"date\": \"Oct 5\", \"amount\": 49.0, \"status\": \"declined\"}, {\"date\": \"Oct 6\", \"amount\": 49.0, \"status\": \"charged\"}, {\"date\": \"Oct 6\", \"amount\": 49.0, \"status\": \"charged\"}]"
+    },
+    {
+      "role": "assistant",
+      "content": "It appears that there was an issue with the payment on October 5th, which was declined. The charges on October 6th were successful. If you need assistance with this, please let me know!"
+    }
+  ],
+  "intent": "other",
+  "seed": 1,
+  "question_id": "Q10",
+  "design": "hybrid",
+  "question": "My invoice for C-42 shows two charges but I only ordered once",
+  "kind": "open",
+  "expected_intent": null,
+  "outcome": "success",
+  "wall_sec": 2.1
+}

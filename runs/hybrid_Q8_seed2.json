@@ -1,0 +1,43 @@
+{
+  "answer": "Your package with the order number ORD-2002 has been shipped and is expected to arrive in 3 days.",
+  "model_calls": 2,
+  "input_tokens": 147,
+  "output_tokens": 26,
+  "latency_sec": 1.6235344409942627,
+  "tool_results": [
+    {
+      "tool": "get_order",
+      "args": {
+        "order_id": "ORD-2002"
+      },
+      "result": "{\"item\": \"keyboard\", \"status\": \"shipped\", \"eta_days\": 3}"
+    }
+  ],
+  "transcript": [
+    {
+      "role": "system",
+      "content": "You are a support assistant. Answer the customer using ONLY the provided tool results. If a fact is unknown, say so."
+    },
+    {
+      "role": "user",
+      "content": "Track my package ORD-2002 please"
+    },
+    {
+      "role": "user",
+      "content": "Tool results:\n[get_order -> {\"item\": \"keyboard\", \"status\": \"shipped\", \"eta_days\": 3}]"
+    },
+    {
+      "role": "assistant",
+      "content": "Your package with the order number ORD-2002 has been shipped and is expected to arrive in 3 days."
+    }
+  ],
+  "intent": "order_status",
+  "seed": 2,
+  "question_id": "Q8",
+  "design": "hybrid",
+  "question": "Track my package ORD-2002 please",
+  "kind": "known",
+  "expected_intent": "order_status",
+  "outcome": "success",
+  "wall_sec": 1.62
+}

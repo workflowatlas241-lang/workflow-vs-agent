@@ -1,0 +1,48 @@
+{
+  "answer": "Based on the tool results, you can still get a refund for order INV-1001. The item was delivered 12 days ago, which is within the 30-day refund policy. However, please ensure that the item is unused before requesting a refund.",
+  "model_calls": 2,
+  "input_tokens": 184,
+  "output_tokens": 57,
+  "latency_sec": 2.335519790649414,
+  "tool_results": [
+    {
+      "tool": "get_order",
+      "args": {
+        "order_id": "INV-1001"
+      },
+      "result": "{\"item\": \"office chair\", \"status\": \"delivered\", \"delivered_days_ago\": 12}"
+    },
+    {
+      "tool": "get_refund_policy",
+      "args": {},
+      "result": "Refunds are accepted within 30 days of delivery if the item is unused."
+    }
+  ],
+  "transcript": [
+    {
+      "role": "system",
+      "content": "You are a support assistant. Answer the customer using ONLY the provided tool results. If a fact is unknown, say so."
+    },
+    {
+      "role": "user",
+      "content": "Can I still get a refund for order INV-1001?"
+    },
+    {
+      "role": "user",
+      "content": "Tool results:\n[get_order -> {\"item\": \"office chair\", \"status\": \"delivered\", \"delivered_days_ago\": 12}]\n[get_refund_policy -> Refunds are accepted within 30 days of delivery if the item is unused.]"
+    },
+    {
+      "role": "assistant",
+      "content": "Based on the tool results, you can still get a refund for order INV-1001. The item was delivered 12 days ago, which is within the 30-day refund policy. However, please ensure that the item is unused before requesting a refund."
+    }
+  ],
+  "intent": "refund_status",
+  "seed": 2,
+  "question_id": "Q1",
+  "design": "hybrid",
+  "question": "Can I still get a refund for order INV-1001?",
+  "kind": "known",
+  "expected_intent": "refund_status",
+  "outcome": "success",
+  "wall_sec": 2.34
+}

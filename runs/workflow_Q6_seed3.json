@@ -1,0 +1,41 @@
+{
+  "answer": "Refunds are accepted within 30 days of delivery if the item is unused.",
+  "model_calls": 2,
+  "input_tokens": 137,
+  "output_tokens": 18,
+  "latency_sec": 1.5721063613891602,
+  "tool_results": [
+    {
+      "tool": "get_refund_policy",
+      "args": {},
+      "result": "Refunds are accepted within 30 days of delivery if the item is unused."
+    }
+  ],
+  "transcript": [
+    {
+      "role": "system",
+      "content": "You are a support assistant. Answer the customer using ONLY the provided tool results. If a fact is unknown, say so."
+    },
+    {
+      "role": "user",
+      "content": "What is your refund policy?"
+    },
+    {
+      "role": "user",
+      "content": "Tool results:\n[get_refund_policy -> Refunds are accepted within 30 days of delivery if the item is unused.]"
+    },
+    {
+      "role": "assistant",
+      "content": "Refunds are accepted within 30 days of delivery if the item is unused."
+    }
+  ],
+  "intent": "refund_policy",
+  "seed": 3,
+  "question_id": "Q6",
+  "design": "workflow",
+  "question": "What is your refund policy?",
+  "kind": "known",
+  "expected_intent": "refund_policy",
+  "outcome": "success",
+  "wall_sec": 1.57
+}

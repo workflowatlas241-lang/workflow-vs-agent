@@ -1,0 +1,22 @@
+{
+  "outcome": "handoff",
+  "intent": "other",
+  "answer": "",
+  "model_calls": 1,
+  "input_tokens": 75,
+  "output_tokens": 0,
+  "latency_sec": 0.37235522270202637,
+  "tool_calls": [],
+  "transcript": [
+    {
+      "raw_router": "{\"intent\": \"other\"}"
+    }
+  ],
+  "seed": 1,
+  "question_id": "Q10",
+  "design": "workflow",
+  "question": "My invoice for C-42 shows two charges but I only ordered once",
+  "kind": "open",
+  "expected_intent": null,
+  "wall_sec": 0.37
+}

@@ -1,0 +1,22 @@
+{
+  "outcome": "handoff",
+  "intent": "other",
+  "answer": "",
+  "model_calls": 1,
+  "input_tokens": 77,
+  "output_tokens": 0,
+  "latency_sec": 0.36492347717285156,
+  "tool_calls": [],
+  "transcript": [
+    {
+      "raw_router": "{\"intent\": \"other\"}"
+    }
+  ],
+  "seed": 1,
+  "question_id": "Q11",
+  "design": "workflow",
+  "question": "Something looks wrong with my billing on account C-42, can you check?",
+  "kind": "open",
+  "expected_intent": null,
+  "wall_sec": 0.37
+}

@@ -1,0 +1,33 @@
+{
+  "data": {
+    "orders": {
+      "INV-1001": {"item": "office chair", "status": "delivered", "delivered_days_ago": 12},
+      "INV-1002": {"item": "monitor", "status": "delivered", "delivered_days_ago": 45},
+      "ORD-2002": {"item": "keyboard", "status": "shipped", "eta_days": 3},
+      "ORD-2003": {"item": "desk lamp", "status": "delivered", "delivered_days_ago": 5}
+    },
+    "refund_policy": "Refunds are accepted within 30 days of delivery if the item is unused.",
+    "cancellation_policy": "Subscriptions can be cancelled anytime, effective at the next billing cycle.",
+    "payments": {
+      "C-42": [
+        {"date": "Oct 5", "amount": 49.0, "status": "declined"},
+        {"date": "Oct 6", "amount": 49.0, "status": "charged"},
+        {"date": "Oct 6", "amount": 49.0, "status": "charged"}
+      ]
+    }
+  },
+  "questions": [
+    {"id": "Q1", "kind": "known", "intent": "refund_status", "verdict": "yes", "question": "Can I still get a refund for order INV-1001?", "required": ["30", "12"]},
+    {"id": "Q2", "kind": "known", "intent": "refund_status", "verdict": "no", "question": "Can I still get a refund for order INV-1002?", "required": ["45"]},
+    {"id": "Q3", "kind": "known", "intent": "order_status", "question": "Where is my order ORD-2002?", "required": ["3"]},
+    {"id": "Q4", "kind": "known", "intent": "order_status", "question": "Has my order ORD-2003 been delivered?", "required": ["delivered"]},
+    {"id": "Q5", "kind": "known", "intent": "cancellation", "question": "How do I cancel my subscription?", "required": ["next"]},
+    {"id": "Q6", "kind": "known", "intent": "refund_policy", "question": "What is your refund policy?", "required": ["30"]},
+    {"id": "Q7", "kind": "known", "intent": "refund_status", "question": "I want to return a chair I bought", "required": ["30"]},
+    {"id": "Q8", "kind": "known", "intent": "order_status", "question": "Track my package ORD-2002 please", "required": ["3"]},
+    {"id": "Q9", "kind": "open", "intent": null, "question": "I was charged twice in October for my account C-42, why?", "required": ["declined"]},
+    {"id": "Q10", "kind": "open", "intent": null, "question": "My invoice for C-42 shows two charges but I only ordered once", "required": ["declined"]},
+    {"id": "Q11", "kind": "open", "intent": null, "question": "Something looks wrong with my billing on account C-42, can you check?", "required": ["declined"]},
+    {"id": "Q12", "kind": "open", "intent": null, "question": "Look into the recent charges on my account C-42", "required": ["declined"]}
+  ]
+}

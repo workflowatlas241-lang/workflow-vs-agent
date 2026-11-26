@@ -1,0 +1,43 @@
+{
+  "answer": "Your order ORD-2002 has been shipped and will arrive in approximately 3 days.",
+  "model_calls": 2,
+  "input_tokens": 148,
+  "output_tokens": 21,
+  "latency_sec": 1.616577386856079,
+  "tool_results": [
+    {
+      "tool": "get_order",
+      "args": {
+        "order_id": "ORD-2002"
+      },
+      "result": "{\"item\": \"keyboard\", \"status\": \"shipped\", \"eta_days\": 3}"
+    }
+  ],
+  "transcript": [
+    {
+      "role": "system",
+      "content": "You are a support assistant. Answer the customer using ONLY the provided tool results. If a fact is unknown, say so."
+    },
+    {
+      "role": "user",
+      "content": "Where is my order ORD-2002?"
+    },
+    {
+      "role": "user",
+      "content": "Tool results:\n[get_order -> {\"item\": \"keyboard\", \"status\": \"shipped\", \"eta_days\": 3}]"
+    },
+    {
+      "role": "assistant",
+      "content": "Your order ORD-2002 has been shipped and will arrive in approximately 3 days."
+    }
+  ],
+  "intent": "order_status",
+  "seed": 2,
+  "question_id": "Q3",
+  "design": "workflow",
+  "question": "Where is my order ORD-2002?",
+  "kind": "known",
+  "expected_intent": "order_status",
+  "outcome": "success",
+  "wall_sec": 1.62
+}

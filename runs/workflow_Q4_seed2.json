@@ -1,0 +1,43 @@
+{
+  "answer": "Yes, your order ORD-2003 has been delivered. It was delivered 5 days ago.",
+  "model_calls": 2,
+  "input_tokens": 154,
+  "output_tokens": 23,
+  "latency_sec": 1.7009022235870361,
+  "tool_results": [
+    {
+      "tool": "get_order",
+      "args": {
+        "order_id": "ORD-2003"
+      },
+      "result": "{\"item\": \"desk lamp\", \"status\": \"delivered\", \"delivered_days_ago\": 5}"
+    }
+  ],
+  "transcript": [
+    {
+      "role": "system",
+      "content": "You are a support assistant. Answer the customer using ONLY the provided tool results. If a fact is unknown, say so."
+    },
+    {
+      "role": "user",
+      "content": "Has my order ORD-2003 been delivered?"
+    },
+    {
+      "role": "user",
+      "content": "Tool results:\n[get_order -> {\"item\": \"desk lamp\", \"status\": \"delivered\", \"delivered_days_ago\": 5}]"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, your order ORD-2003 has been delivered. It was delivered 5 days ago."
+    }
+  ],
+  "intent": "order_status",
+  "seed": 2,
+  "question_id": "Q4",
+  "design": "workflow",
+  "question": "Has my order ORD-2003 been delivered?",
+  "kind": "known",
+  "expected_intent": "order_status",
+  "outcome": "success",
+  "wall_sec": 1.7
+}

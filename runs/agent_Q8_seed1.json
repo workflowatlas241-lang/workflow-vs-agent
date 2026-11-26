@@ -1,0 +1,57 @@
+{
+  "answer": "Your package ORD-2002 is a keyboard that has been shipped and will arrive in approximately 3 days. Thank you for using our service!",
+  "model_calls": 2,
+  "input_tokens": 688,
+  "output_tokens": 55,
+  "latency_sec": 2.184265613555908,
+  "tool_calls": [
+    {
+      "name": "get_order",
+      "args": {
+        "order_id": "ORD-2002"
+      },
+      "result": "{\"item\": \"keyboard\", \"status\": \"shipped\", \"eta_days\": 3}"
+    }
+  ],
+  "transcript": [
+    {
+      "role": "system",
+      "content": "You are a support assistant. You can call tools to look up orders, the refund policy, and payments. Investigate and answer the customer. Never invent data — use tool results only."
+    },
+    {
+      "role": "user",
+      "content": "Track my package ORD-2002 please"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "function": {
+            "name": "get_order",
+            "arguments": {
+              "order_id": "ORD-2002"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "{\"item\": \"keyboard\", \"status\": \"shipped\", \"eta_days\": 3}"
+    },
+    {
+      "role": "assistant",
+      "content": "Your package ORD-2002 is a keyboard that has been shipped and will arrive in approximately 3 days. Thank you for using our service!"
+    }
+  ],
+  "intent": null,
+  "seed": 1,
+  "question_id": "Q8",
+  "design": "agent",
+  "question": "Track my package ORD-2002 please",
+  "kind": "known",
+  "expected_intent": "order_status",
+  "outcome": "success",
+  "wall_sec": 2.18
+}

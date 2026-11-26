@@ -1,0 +1,53 @@
+{
+  "answer": "The store's refund policy is as follows:\n\nRefunds are accepted within 30 days of delivery if the item is unused.",
+  "model_calls": 2,
+  "input_tokens": 670,
+  "output_tokens": 42,
+  "latency_sec": 1.943197250366211,
+  "tool_calls": [
+    {
+      "name": "get_refund_policy",
+      "args": {},
+      "result": "Refunds are accepted within 30 days of delivery if the item is unused."
+    }
+  ],
+  "transcript": [
+    {
+      "role": "system",
+      "content": "You are a support assistant. You can call tools to look up orders, the refund policy, and payments. Investigate and answer the customer. Never invent data — use tool results only."
+    },
+    {
+      "role": "user",
+      "content": "What is your refund policy?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "function": {
+            "name": "get_refund_policy",
+            "arguments": {}
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Refunds are accepted within 30 days of delivery if the item is unused."
+    },
+    {
+      "role": "assistant",
+      "content": "The store's refund policy is as follows:\n\nRefunds are accepted within 30 days of delivery if the item is unused."
+    }
+  ],
+  "intent": null,
+  "seed": 1,
+  "question_id": "Q6",
+  "design": "agent",
+  "question": "What is your refund policy?",
+  "kind": "known",
+  "expected_intent": "refund_policy",
+  "outcome": "success",
+  "wall_sec": 1.94
+}

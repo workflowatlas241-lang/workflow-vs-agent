@@ -1,0 +1,22 @@
+{
+  "outcome": "handoff",
+  "intent": "other",
+  "answer": "",
+  "model_calls": 1,
+  "input_tokens": 76,
+  "output_tokens": 0,
+  "latency_sec": 0.39907169342041016,
+  "tool_calls": [],
+  "transcript": [
+    {
+      "raw_router": "{\"intent\": \"other\"}"
+    }
+  ],
+  "seed": 1,
+  "question_id": "Q9",
+  "design": "workflow",
+  "question": "I was charged twice in October for my account C-42, why?",
+  "kind": "open",
+  "expected_intent": null,
+  "wall_sec": 0.4
+}

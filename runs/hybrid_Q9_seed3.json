@@ -1,0 +1,57 @@
+{
+  "answer": "It appears that there was an issue with the payment processing on October 5th, resulting in a declined transaction. On October 6th, the charge was successfully processed twice, which is why you were charged twice. I recommend contacting our customer support team to investigate further and resolve this issue.",
+  "model_calls": 2,
+  "input_tokens": 750,
+  "output_tokens": 81,
+  "latency_sec": 2.6557576656341553,
+  "tool_calls": [
+    {
+      "name": "get_payments",
+      "args": {
+        "customer_id": "C-42"
+      },
+      "result": "[{\"date\": \"Oct 5\", \"amount\": 49.0, \"status\": \"declined\"}, {\"date\": \"Oct 6\", \"amount\": 49.0, \"status\": \"charged\"}, {\"date\": \"Oct 6\", \"amount\": 49.0, \"status\": \"charged\"}]"
+    }
+  ],
+  "transcript": [
+    {
+      "role": "system",
+      "content": "You are a support assistant. You can call tools to look up orders, the refund policy, and payments. Investigate and answer the customer. Never invent data — use tool results only."
+    },
+    {
+      "role": "user",
+      "content": "I was charged twice in October for my account C-42, why?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "function": {
+            "name": "get_payments",
+            "arguments": {
+              "customer_id": "C-42"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "[{\"date\": \"Oct 5\", \"amount\": 49.0, \"status\": \"declined\"}, {\"date\": \"Oct 6\", \"amount\": 49.0, \"status\": \"charged\"}, {\"date\": \"Oct 6\", \"amount\": 49.0, \"status\": \"charged\"}]"
+    },
+    {
+      "role": "assistant",
+      "content": "It appears that there was an issue with the payment processing on October 5th, resulting in a declined transaction. On October 6th, the charge was successfully processed twice, which is why you were charged twice. I recommend contacting our customer support team to investigate further and resolve this issue."
+    }
+  ],
+  "intent": "other",
+  "seed": 3,
+  "question_id": "Q9",
+  "design": "hybrid",
+  "question": "I was charged twice in October for my account C-42, why?",
+  "kind": "open",
+  "expected_intent": null,
+  "outcome": "success",
+  "wall_sec": 3.29
+}
